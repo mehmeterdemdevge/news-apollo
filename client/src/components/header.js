@@ -1,8 +1,7 @@
-import React from 'react';
-import { colors, widths } from '../styles';
-import styled from '@emotion/styled';
-import { Link } from '@reach/router';
-import logo from '../assets/space_cat_logo.png';
+import React from "react";
+import { colors, widths } from "../styles";
+import styled from "@emotion/styled";
+import { Link } from "@reach/router";
 
 /**
  * Header renders the top navigation
@@ -15,12 +14,10 @@ const Header = ({ children }) => {
         <HomeButtonContainer>
           <HomeLink to="/">
             <HomeButton>
-              <LogoContainer>
-                <Logo src={logo} />
-              </LogoContainer>
+              <LogoContainer></LogoContainer>
               <Title>
-                <h3>Catstronaut</h3>
-                <div>Kitty space academy</div>
+                <h3>Brief News</h3>
+                <div>Your News Center</div>
               </Title>
             </HomeButton>
           </HomeLink>
@@ -35,15 +32,15 @@ export default Header;
 
 /** Header styled components */
 const HeaderBar = styled.div({
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'center',
-  borderBottom: `solid 1px ${colors.pink.light}`,
-  boxShadow: '0px 1px 5px 0px rgba(0,0,0,0.15)',
-  padding: '5px 30px',
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  borderBottom: `solid 1px ${colors.grey.light}`,
+  boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.15)",
+  padding: "5px 30px",
   minHeight: 80,
-  backgroundColor: 'white',
+  backgroundColor: "white",
 });
 
 const Container = styled.div({
@@ -51,25 +48,25 @@ const Container = styled.div({
 });
 
 const HomeLink = styled(Link)({
-  textDecoration: 'none',
+  textDecoration: "none",
 });
 
 const HomeButtonContainer = styled.div({
-  display: 'flex',
+  display: "flex",
   flex: 1,
 });
 
 const HomeButton = styled.div({
-  display: 'flex',
-  flexDirection: 'row',
-  color: colors.accent,
-  alignItems: 'center',
-  ':hover': {
-    color: colors.pink.dark,
+  display: "flex",
+  flexDirection: "row",
+  color: colors.text,
+  alignItems: "center",
+  ":hover": {
+    color: colors.grey.dark,
   },
 });
 
-const LogoContainer = styled.div({ display: 'flex', alignSelf: 'center' });
+const LogoContainer = styled.div({ display: "flex", alignSelf: "center" });
 
 const Logo = styled.img({
   height: 60,
@@ -78,15 +75,15 @@ const Logo = styled.img({
 });
 
 const Title = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
+  display: "flex",
+  flexDirection: "column",
   h3: {
-    lineHeight: '1em',
+    lineHeight: "1em",
     marginBottom: 0,
   },
   div: {
-    fontSize: '0.9em',
-    lineHeight: '0.8em',
+    fontSize: "0.9em",
+    lineHeight: "0.8em",
     paddingLeft: 2,
   },
 });
